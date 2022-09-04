@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <input id="txt-simple" type="text">
+            <button id="btn-simple">CLICK ME</button>
+        </form>
+    </div>
+
+    <script defer>
+        const $ = (element) => document.getElementById(element) 
+        const btn_simple = $('btn-simple')
+        
+        btn_simple.addEventListener('click', (e)=> {
+            if ($('txt-simple').value.replace(/\s/g, '').length > 0) {
+                alert($('txt-simple').value)
+            }else {
+                alert('VACIO')
+            }
+            e.preventDefault()
+        })
+        
+
+    </script>
+</body>
+</html>
